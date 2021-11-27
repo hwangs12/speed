@@ -1,8 +1,10 @@
 const fibonacci = function (n) {
     if (n === 1 || n === 2) {
+        console.log(n)
         return 1;
     } else {
-        return fibonacci(n - 1) + fibonacci(n - 2)
+        console.log(n)
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
 
@@ -11,8 +13,6 @@ const url = require('url')
 
 http.createServer(function (req, res) {
     const urlP = url.parse(req.url, true);
-    console.log(req.url)
-    console.log(urlP)
 
     let fibo;
     res.writeHead(200, { 'Content-Type': 'text/plain' });
